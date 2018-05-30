@@ -8,29 +8,27 @@ const port = process.env.PORT || 3000;
 var app = express();    
 
 const mongo = require('mongodb');         // importing mongo db 
-const MongoClient = mongo.MongoClient;  // driver for mongodb 
-var url = 'mongodb://localhost:27017';   // connection url specifically for version 3.x 
-        
+const MongoClient = mongo.MongoClient  , Server = require('mongodb').Server;         // driver for mongodb 
+       
 app.use(morgan('Dev'));  
 app.use(bodyParser.json());            
 app.use(bodyParser.urlencoded({extended: false}));  
 app.use(express.static("public"));
 
 
-MongoClient.connect(url, function(err, client) {            //Conneting to databse
-              if(err)                   
-                return console.log(err);
-              
-              console.log("Connected successfully to server");
-              var db = client.db('customerData');           // getting database
-            
-
+var mongoClient = new MongoClient(new Server('localhost', 27017));		//connecting to mongodb
+mongoClient.connect(function(err, mongoClient) {
+	if(err)
+     	 	throw err;
+	
+  var db = mongoClient.db('customerData');
+   
             createDocuments(db);                // CREATE DOCUMENT
              readDocuments(db);             // READ DOCUMENT
              updateDocument(db);                 // UPDATE DOCUMENT
               deleteDocuments(db);                 //DELETE DOCUMENT
                   
-              client.close();                 // closing databse
+              mongoClient.close();                 // closing databse
               
   });
 
@@ -41,8 +39,8 @@ function createDocuments(db) {
         {id:6, name : "rahul",age: 40},{id:7, name : "manan",age: 90}
       ], function(err) {
         if(err)                   
-          return console.log(err);
-        else
+          	throw err;
+        
         console.log("Inserted 3 documents into the collection");
         
   });
@@ -51,11 +49,11 @@ function createDocuments(db) {
 function readDocuments(db)
 {
     db.collection('customers').find({}).toArray(function(err, docs) {
-        if(err)                   
-              return console.log(err);
-          else{
+         if(err)                   
+          	throw err;
+
         console.log("Found the following records");
-        console.log(docs)}
+        console.log(docs)
       });
 }
 
@@ -63,9 +61,9 @@ function updateDocument(db) {
  
   db.collection('customers').update({ id : 2 }
     , { $set: { age : 23 } }, function(err) {
-          if(err)                   
-              return console.log(err);
-            else
+           if(err)                   
+          	throw err;
+
            console.log("Updated the document "); 
   });  
 }
@@ -73,10 +71,10 @@ function updateDocument(db) {
 function deleteDocuments(db) {
   
   db.collection('customers').deleteOne({ id : 6 }, function(err) {
-            if(err)                 
-               console.log(err);
-           else
-               console.log("Removed the document ");
+             if(err)                   
+          	throw err;
+
+             console.log("Removed the document ");
 
   });    
 }
