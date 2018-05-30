@@ -1,0 +1,80 @@
+
+sudo service mongodb start;				 // start mongodb in background
+sudo servide mongodb stop;				 // stop mangodb in background
+
+mongo; 							// start using mongodb
+exit; 							// exit from mongodb 
+
+use db_name; 						// use existing or create one
+ 
+db; 							// show current database you are in
+ 
+show dbs;						 // show all databases in mongodb
+
+db.createColletion("name_of_collection"); 		// to create collection 
+
+
+db.getCollectionNames()				//lists all collections 
+							
+
+							INSERT
+
+db.collection_name.insert(); 	 // a single object or array of objects can be inserted 
+
+
+
+							UPDATE
+
+
+
+db.collection_name.update({to identify object},{relaces matched onject with this object}); 				//to update a value 
+
+db.collection_name.update({to identify object},{$set : {key-val pairs}}); 				// updates attributes in object or add one
+
+db.collection_name.update({to identify object},{$inc :{"numeric attribute to increment" : number to increment with}});   // To increment numeric values
+
+db.collection_name.update({to identify object},{$unset : {key-val}}); 						// remove key-val pair from object
+
+db.collection_name.update({to identify object},{To replace},{upsert : true});   			// To update given obj , if not insert it 
+
+db.collection_name.update({to identify object},{$rename : {"key" : "new key"}});  			 // To rename a key of object
+
+
+
+							DELETE
+
+
+db.collection_name.remove({key-val to identify});  // remove a collection document
+
+
+  							FIND
+
+
+db.collection_name.find();				 //look all objects in collection 
+
+db.collection_name.find().pretty(); 			//makes good visibility for objects 
+
+db.collection_name.find({key-val});                     // find objects by key values
+
+db.collection_name.find({$or : [{},{},....]]}   	// find for n numbers of key-val pairs
+
+db.collection_name.find({attribute :{$gt : number}})   // all objects with given attribute but value greater than given $lt for less
+
+
+							SORT AND COUNT ,LIMIT
+
+db.collection_name.find().sortby({key : 1})        // sort by key in ascending order , -1 for descending    
+
+db.collection_name.find().count();                 //count of all objects
+
+db.collection_name.find().limit(n);           // shows only first n results
+
+
+							FOR EACH IN FIND 
+
+db.collection_name.find().forEach(function(doc){ });
+
+example 
+	db.collection_name.find().forEach(function(doc){print("name : " + doc.first_name) }); //print every documents first name 
+
+	
