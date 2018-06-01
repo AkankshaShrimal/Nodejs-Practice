@@ -11,6 +11,8 @@ Practice on Node.js (Javascript Framework)
 |04. |  post request using html form, importing static files, middleware         |Day4      |
 |05. | body-parse, morgan for logging, cookie-parse, express-session with example             |Day5       |
 |06. |using express session, session at server side ,cookie at browser side                  |Day6        |
-|07. | mongo db basic, MongoClient, mongo shell commands, CRUD in mongodb using nodejs         |Day7       |
-|08. |connecting to mongodb using MongoClient and performing create and read operation       |Day8       |
-|09. |mongoose-for connecting mongodb to node and performing CRUD operations  |Day9      |
+|07. | **mongodb basic**, MongoClient, mongo shell commands, CRUD in mongodb using nodejs         |Day7       |
+|08. |connecting to mongodb using **MongoClient** and performing create and read operation       |Day8       |
+|09. |**mongoose**-for connecting mongodb to node and performing CRUD operations  |Day9      |
+
+ 
