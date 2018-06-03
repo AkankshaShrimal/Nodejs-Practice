@@ -14,6 +14,6 @@ Practice on Node.js (Javascript Framework)
 |07. | **mongodb basic**, MongoClient, mongo shell commands, CRUD in mongodb using nodejs         |Day7       |
 |08. |connecting to mongodb using **MongoClient** and performing create and read operation       |Day8       |
 |09. |**mongoose**-for connecting mongodb to node and performing CRUD operations  |Day9      |
-|10. |mongoose advance utility- validators, getters, setters, middleware- document and query level, static methods, instance methods  |Day10      |
+|10. |mongoose advance utility- validators, getters, setters, middleware- document and query level, static methods, instance methods  |Day10     |
 
  
