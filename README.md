@@ -17,4 +17,4 @@ Practice on Node.js (Javascript Framework)
 |10. |mongoose advance utility- validators, getters, setters, middleware- document and query level, static methods, instance methods  |Day10     |
 |11. |Asynchronous code, callback Hell, **Q library** - creating promises, chaining promises, promises in parallel, resolve and reject objects,other libraries for promise management - **asynch.js**, **bluebird.js**, **when.js** |Day11     |
 |12. |creating modular project, exporting modules, using **express.Router** and **module.exports**|Day12    |
-|12. |creating loginApp using- express-handlebars, passport.js, express-sesssion, express-validator, connect-flash and mongoose.  |loginApp    |
+|12. |creating **loginApp** using- express-handlebars, passport.js, express-sesssion, express-validator, connect-flash and mongoose.  |loginApp    |
