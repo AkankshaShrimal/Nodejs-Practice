@@ -1,0 +1,28 @@
+{
+  "name": "loginapp",
+  "version": "1.0.0",
+  "description": "a simple login app with authentication using passport",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+"body-parser" :  "*",
+"connect-flash" : "*",
+"cookie-parser" : "*",
+
+"express-handlebars" : "*",
+"express-messages" :"*",
+"express-session" : "*",
+"express-validator" : "*",
+"mongodb" : "*",
+"mongoose" : "*",
+"passport" : "*",
+"passport-http" : "*",
+"passport-local" : "*"
+	
+  }
+}
