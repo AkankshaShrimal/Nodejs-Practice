@@ -18,3 +18,13 @@ Practice on Node.js (Javascript Framework)
 |11. |Asynchronous code, callback Hell, **Q library** - creating promises, chaining promises, promises in parallel, resolve and reject objects,other libraries for promise management - **asynch.js**, **bluebird.js**, **when.js** |Day11     |
 |12. |creating modular project, exporting modules, using **express.Router** and **module.exports**|Day12    |
 |13. |creating **loginApp** using- express-handlebars, passport.js, express-sesssion, express-validator, connect-flash and mongoose.  |loginApp    |
+|14. |learning about **sockets** and creating a chat Application |socket    |
+
+## Advanced Topics List:
+ 
+- File System
+- Event listener
+- Gulp task runner, text compression methods
+- Backend templating- EJS 
+
+
