@@ -1,5 +1,6 @@
 # NodeJS_Practice
-Practice on Node.js (Javascript Framework)
+
+Practice on Node.js (Javascript Framework) for developing backend servers
 
 ## Table Of Contents
 
